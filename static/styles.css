@@ -51,7 +51,7 @@ form button:hover {
     background: #1a5bbd;
 }
 
-a {
+/* a {
     margin-top: 1rem;
     color: #2575fc;
     text-decoration: none;
@@ -59,7 +59,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
+} */
 
 /* Responsive Styles */
 @media (max-width: 480px) {

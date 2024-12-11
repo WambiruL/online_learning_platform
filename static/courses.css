@@ -1,0 +1,91 @@
+/* General container styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Heading style */
+.container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Course list styling */
+.course-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual course item */
+.course-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Course title link */
+.course-title {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0056b3;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: color 0.2s ease;
+}
+
+.course-title:hover {
+    color: #003d7e;
+}
+
+/* Course description */
+.course-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Enroll button */
+.enroll-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745 !important;
+    color: #fff;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enroll-button:hover {
+    background-color: #218838;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Empty message styling */
+.course-list p {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+    margin: 20px 0;
+}

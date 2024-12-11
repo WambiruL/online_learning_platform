@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h2>Available Courses</h2>
+    <ul class="course-list">
+        {% for course in courses %}
+            <li class="course-item">
+                <a href="{% url 'course_detail' course.id %}" class="course-title">{{ course.title }}</a> 
+                <p class="course-description">{{ course.description }}</p>
+                {% if user.role == 'student' %}
+                    <a href="{% url 'enroll_in_course' course.id %}" class="enroll-button">Enroll</a>
+                {% endif %}
+            </li>
+        {% empty %}
+            <p>No courses available.</p>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

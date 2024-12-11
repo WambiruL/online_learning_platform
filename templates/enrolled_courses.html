@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+
+<h2>Your Enrolled Courses</h2>
+<ul>
+    {% for enrollment in enrollments %}
+        <li>{{ enrollment.course.title }}</li>
+    {% empty %}
+        <p>No enrolled courses yet.</p>
+    {% endfor %}
+</ul>
+
+</div>
+{% endblock%}

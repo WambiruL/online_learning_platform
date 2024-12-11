@@ -20,7 +20,8 @@ def register_user(request):
         try:
             # Create the user if email is unique
             user = User.objects.create_user(email=email, password=password, role=role)
-            return redirect('course-list.html')
+            login(request,user)
+            return redirect('course_list')
         except Exception as e:
             return render(request, 'register.html', {'error': str(e)})
 
@@ -36,7 +37,7 @@ def login_user(request):
         if user:
             login(request, user)
             refresh = RefreshToken.for_user(user)
-            response = redirect('dashboard')
+            response = redirect('course_list')
             response.set_cookie('access_token', str(refresh.access_token), httponly=True)
             response.set_cookie('refresh_token', str(refresh), httponly=True)
             return response
